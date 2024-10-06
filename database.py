@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 SQLALCHEMY_DATABASE_URL = f"{os.getenv('SQLALCHEMY_DATABASE_URL')}"
 
