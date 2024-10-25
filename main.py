@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends
-from amadeusapi import requestAmadeus
+from services.amadeusapi import requestAmadeus
 from sqlalchemy.orm import Session
-from models import Base, Item
-from database import engine, get_db
+from models.models import Base, Item
+from db.database import engine, get_db
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
