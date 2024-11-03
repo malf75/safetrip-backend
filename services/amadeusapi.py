@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-def requestAmadeus(origem, destino, moeda, data):
+def requestAmadeus(origem, destino, moeda, data, viajantes):
     
     headers = {
         "Authorization": f"Bearer {os.getenv('AMADEUS_API_KEY')}",
@@ -25,10 +25,7 @@ def requestAmadeus(origem, destino, moeda, data):
             }
         ],
         "travelers": [
-            {
-                "id": "1",
-                "travelerType": "ADULT"
-            }
+            viajantes
         ],
         "sources": ["GDS"],
         "searchCriteria":{
