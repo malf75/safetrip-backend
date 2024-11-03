@@ -13,7 +13,7 @@ async def read_item(origem: str, destino: str, moeda: str, data: str, viajantes:
     Formato Viajantes: {"id": id, "travelerType: "ADULT"} tipos: [ADULT, CHILD, SENIOR, YOUNG, HELD_INFANT, SEATED_INFANT, STUDENT]\n
     Formato Data: yyyy-mm-dd\n
     Formato Moeda: BRL\n
-    Formato Idade: MCZ\n
+    Formato Cidade: MCZ\n
     """
     city_destiny = db.query(Item).filter(Item.city_code == destino).first()
     city_origin = db.query(Item).filter(Item.city_code == origem).first()
