@@ -1,13 +1,10 @@
 import requests
-import os
-from dotenv import load_dotenv
-
-load_dotenv(override=True)
+from setup.settings import AMADEUS_API_KEY
 
 def requestAmadeus(origem, destino, moeda, data, viajantes):
     
     headers = {
-        "Authorization": f"Bearer {os.getenv('AMADEUS_API_KEY')}",
+        "Authorization": f"Bearer {AMADEUS_API_KEY}",
         "Content-Type": "application/json"
     }
 
