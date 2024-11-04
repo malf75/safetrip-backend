@@ -26,7 +26,7 @@ def requestAmadeus(origem, destino, moeda, data, viajantes):
         ],
         "sources": ["GDS"],
         "searchCriteria":{
-        "maxFlightOffers": 5,
+        "maxFlightOffers": 2,
         }
     }
 

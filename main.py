@@ -21,4 +21,4 @@ async def read_item(origem: str, destino: str, moeda: str, data: str, viajantes:
         return {"error":"City not found"}
     city_status = city_destiny.status
     amadeus_response = requestAmadeus(origem, destino, moeda, data, viajantes)
-    return {"city_status": city_status, "amadeus_response": amadeus_response}
+    return {f"{city_destiny.city}": city_status, "amadeus_response": amadeus_response}
